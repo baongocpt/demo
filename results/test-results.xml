@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.078" tests="3" failures="2">
+  <testsuite name="Root Suite" timestamp="2023-03-20T17:00:29" tests="0" file="cypress/e2e/api/Test1.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="My First Test Suite" timestamp="2023-03-20T17:00:29" tests="3" time="2.064" failures="2">
+    <testcase name="My First Test Suite Get All Employees" time="1.076" classname="Get All Employees">
+    </testcase>
+    <testcase name="My First Test Suite Get Employee ID" time="0.000" classname="Get Employee ID">
+      <failure message="`cy.request()` failed on:
+
+https://dummy.restapiexample.com/api/v1/employee/1
+
+The response we received from your web server was:
+
+  &gt; 429: Too Many Requests
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: https://dummy.restapiexample.com/api/v1/employee/1
+Headers: {
+  &quot;Connection&quot;: &quot;keep-alive&quot;,
+  &quot;user-agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.8.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36&quot;,
+  &quot;accept&quot;: &quot;*/*&quot;,
+  &quot;accept-encoding&quot;: &quot;gzip, deflate&quot;
+}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 429 - Too Many Requests
+Headers: {
+  &quot;date&quot;: &quot;Mon, 20 Mar 2023 17:00:32 GMT&quot;,
+  &quot;server&quot;: &quot;nginx/1.21.6&quot;,
+  &quot;content-type&quot;: &quot;text/html; charset=UTF-8&quot;,
+  &quot;content-length&quot;: &quot;595&quot;,
+  &quot;x-ratelimit-limit&quot;: &quot;60&quot;,
+  &quot;x-ratelimit-remaining&quot;: &quot;57&quot;,
+  &quot;retry-after&quot;: &quot;60&quot;,
+  &quot;x-ratelimit-reset&quot;: &quot;1679331690&quot;,
+  &quot;cache-control&quot;: &quot;no-cache, private&quot;,
+  &quot;vary&quot;: &quot;Accept-Encoding&quot;,
+  &quot;content-encoding&quot;: &quot;gzip&quot;,
+  &quot;host-header&quot;: &quot;c2hhcmVkLmJsdWVob3N0LmNvbQ==&quot;,
+  &quot;x-endurance-cache-level&quot;: &quot;2&quot;,
+  &quot;x-nginx-cache&quot;: &quot;WordPress&quot;
+}
+Body: &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+  html, body {
+      background-color: #fff;
+      color: #636b6f;
+      font-family: &apos;Nunito&apos;, sans-serif;
+      font-weight: 100;
+      height: 100vh;
+      margin: 0;
+  }
+
+  .full-height {
+      height: 100vh;
+  }
+
+  .flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+
+  .position-ref {
+      position: relative;
+  }
+
+  .code {
+      border-right: 2px solid;
+      font-size: 26px;
+      padding: 0 15px 0 15px;
+      text-align: center;
+  }
+
+  .message {
+      font-size: 18px;
+      text-align: center;
+  }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;
+      429            &lt;/div&gt;
+
+  &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+      Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` failed on:
+
+https://dummy.restapiexample.com/api/v1/employee/1
+
+The response we received from your web server was:
+
+  > 429: Too Many Requests
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: https://dummy.restapiexample.com/api/v1/employee/1
+Headers: {
+  "Connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.8.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate"
+}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 429 - Too Many Requests
+Headers: {
+  "date": "Mon, 20 Mar 2023 17:00:32 GMT",
+  "server": "nginx/1.21.6",
+  "content-type": "text/html; charset=UTF-8",
+  "content-length": "595",
+  "x-ratelimit-limit": "60",
+  "x-ratelimit-remaining": "57",
+  "retry-after": "60",
+  "x-ratelimit-reset": "1679331690",
+  "cache-control": "no-cache, private",
+  "vary": "Accept-Encoding",
+  "content-encoding": "gzip",
+  "host-header": "c2hhcmVkLmJsdWVob3N0LmNvbQ==",
+  "x-endurance-cache-level": "2",
+  "x-nginx-cache": "WordPress"
+}
+Body: <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+  html, body {
+      background-color: #fff;
+      color: #636b6f;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 100;
+      height: 100vh;
+      margin: 0;
+  }
+
+  .full-height {
+      height: 100vh;
+  }
+
+  .flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+
+  .position-ref {
+      position: relative;
+  }
+
+  .code {
+      border-right: 2px solid;
+      font-size: 26px;
+      padding: 0 15px 0 15px;
+      text-align: center;
+  }
+
+  .message {
+      font-size: 18px;
+      text-align: center;
+  }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+  <div class="code">
+      429            </div>
+
+  <div class="message" style="padding: 10px;">
+      Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+https://on.cypress.io/request
+    at <unknown> (http://localhost:51576/__cypress/runner/cypress_runner.js:139729:80)
+    at tryCatcher (http://localhost:51576/__cypress/runner/cypress_runner.js:8914:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51576/__cypress/runner/cypress_runner.js:6849:31)
+    at Promise._settlePromise (http://localhost:51576/__cypress/runner/cypress_runner.js:6906:18)
+    at Promise._settlePromise0 (http://localhost:51576/__cypress/runner/cypress_runner.js:6951:10)
+    at Promise._settlePromises (http://localhost:51576/__cypress/runner/cypress_runner.js:7031:18)
+    at _drainQueueStep (http://localhost:51576/__cypress/runner/cypress_runner.js:3621:12)
+    at _drainQueue (http://localhost:51576/__cypress/runner/cypress_runner.js:3614:9)
+    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51576/__cypress/runner/cypress_runner.js:3630:5)
+    at Async.drainQueues (http://localhost:51576/__cypress/runner/cypress_runner.js:3500:14)
+From Your Spec Code:
+    at Context.eval (webpack:///./cypress/e2e/api/Test1.js:13:11)]]></failure>
+    </testcase>
+    <testcase name="My First Test Suite Create New Employee" time="0.000" classname="Create New Employee">
+      <failure message="`cy.request()` failed on:
+
+https://dummy.restapiexample.com/api/v1/create
+
+The response we received from your web server was:
+
+  &gt; 429: Too Many Requests
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://dummy.restapiexample.com/api/v1/create
+Headers: {
+  &quot;Connection&quot;: &quot;keep-alive&quot;,
+  &quot;user-agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.8.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36&quot;,
+  &quot;accept&quot;: &quot;*/*&quot;,
+  &quot;accept-encoding&quot;: &quot;gzip, deflate&quot;,
+  &quot;content-type&quot;: &quot;application/json&quot;,
+  &quot;content-length&quot;: 72
+}
+Body: {&quot;body&quot;:&quot;{\&quot;name\&quot;:\&quot;test20032023\&quot;,\&quot;salary\&quot;:\&quot;123\&quot;,\&quot;age\&quot;:\&quot;23\&quot;}&quot;}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 429 - Too Many Requests
+Headers: {
+  &quot;date&quot;: &quot;Mon, 20 Mar 2023 17:00:31 GMT&quot;,
+  &quot;server&quot;: &quot;Apache&quot;,
+  &quot;x-ratelimit-limit&quot;: &quot;60&quot;,
+  &quot;x-ratelimit-remaining&quot;: &quot;56&quot;,
+  &quot;retry-after&quot;: &quot;59&quot;,
+  &quot;x-ratelimit-reset&quot;: &quot;1679331690&quot;,
+  &quot;cache-control&quot;: &quot;no-cache, private&quot;,
+  &quot;vary&quot;: &quot;Accept-Encoding&quot;,
+  &quot;content-encoding&quot;: &quot;gzip&quot;,
+  &quot;host-header&quot;: &quot;c2hhcmVkLmJsdWVob3N0LmNvbQ==&quot;,
+  &quot;x-endurance-cache-level&quot;: &quot;2&quot;,
+  &quot;x-nginx-cache&quot;: &quot;WordPress&quot;,
+  &quot;content-length&quot;: &quot;595&quot;,
+  &quot;content-type&quot;: &quot;text/html; charset=UTF-8&quot;
+}
+Body: &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+        &lt;title&gt;Too Many Requests&lt;/title&gt;
+
+        &lt;!-- Fonts --&gt;
+        &lt;link rel=&quot;dns-prefetch&quot; href=&quot;//fonts.gstatic.com&quot;&gt;
+        &lt;link href=&quot;https://fonts.googleapis.com/css?family=Nunito&quot; rel=&quot;stylesheet&quot;&gt;
+
+        &lt;!-- Styles --&gt;
+        &lt;style&gt;
+  html, body {
+      background-color: #fff;
+      color: #636b6f;
+      font-family: &apos;Nunito&apos;, sans-serif;
+      font-weight: 100;
+      height: 100vh;
+      margin: 0;
+  }
+
+  .full-height {
+      height: 100vh;
+  }
+
+  .flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+
+  .position-ref {
+      position: relative;
+  }
+
+  .code {
+      border-right: 2px solid;
+      font-size: 26px;
+      padding: 0 15px 0 15px;
+      text-align: center;
+  }
+
+  .message {
+      font-size: 18px;
+      text-align: center;
+  }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;flex-center position-ref full-height&quot;&gt;
+  &lt;div class=&quot;code&quot;&gt;
+      429            &lt;/div&gt;
+
+  &lt;div class=&quot;message&quot; style=&quot;padding: 10px;&quot;&gt;
+      Too Many Requests            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` failed on:
+
+https://dummy.restapiexample.com/api/v1/create
+
+The response we received from your web server was:
+
+  > 429: Too Many Requests
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://dummy.restapiexample.com/api/v1/create
+Headers: {
+  "Connection": "keep-alive",
+  "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.8.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "content-type": "application/json",
+  "content-length": 72
+}
+Body: {"body":"{\"name\":\"test20032023\",\"salary\":\"123\",\"age\":\"23\"}"}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 429 - Too Many Requests
+Headers: {
+  "date": "Mon, 20 Mar 2023 17:00:31 GMT",
+  "server": "Apache",
+  "x-ratelimit-limit": "60",
+  "x-ratelimit-remaining": "56",
+  "retry-after": "59",
+  "x-ratelimit-reset": "1679331690",
+  "cache-control": "no-cache, private",
+  "vary": "Accept-Encoding",
+  "content-encoding": "gzip",
+  "host-header": "c2hhcmVkLmJsdWVob3N0LmNvbQ==",
+  "x-endurance-cache-level": "2",
+  "x-nginx-cache": "WordPress",
+  "content-length": "595",
+  "content-type": "text/html; charset=UTF-8"
+}
+Body: <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+  html, body {
+      background-color: #fff;
+      color: #636b6f;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 100;
+      height: 100vh;
+      margin: 0;
+  }
+
+  .full-height {
+      height: 100vh;
+  }
+
+  .flex-center {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+
+  .position-ref {
+      position: relative;
+  }
+
+  .code {
+      border-right: 2px solid;
+      font-size: 26px;
+      padding: 0 15px 0 15px;
+      text-align: center;
+  }
+
+  .message {
+      font-size: 18px;
+      text-align: center;
+  }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+  <div class="code">
+      429            </div>
+
+  <div class="message" style="padding: 10px;">
+      Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+https://on.cypress.io/request
+    at <unknown> (http://localhost:51576/__cypress/runner/cypress_runner.js:139729:80)
+    at tryCatcher (http://localhost:51576/__cypress/runner/cypress_runner.js:8914:23)
+    at Promise._settlePromiseFromHandler (http://localhost:51576/__cypress/runner/cypress_runner.js:6849:31)
+    at Promise._settlePromise (http://localhost:51576/__cypress/runner/cypress_runner.js:6906:18)
+    at Promise._settlePromise0 (http://localhost:51576/__cypress/runner/cypress_runner.js:6951:10)
+    at Promise._settlePromises (http://localhost:51576/__cypress/runner/cypress_runner.js:7031:18)
+    at _drainQueueStep (http://localhost:51576/__cypress/runner/cypress_runner.js:3621:12)
+    at _drainQueue (http://localhost:51576/__cypress/runner/cypress_runner.js:3614:9)
+    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:51576/__cypress/runner/cypress_runner.js:3630:5)
+    at Async.drainQueues (http://localhost:51576/__cypress/runner/cypress_runner.js:3500:14)
+From Your Spec Code:
+    at Context.eval (webpack:///./cypress/e2e/api/Test1.js:22:11)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

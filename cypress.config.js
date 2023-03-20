@@ -7,4 +7,9 @@ module.exports = defineConfig({
     },
     specPattern: 'cypress/e2e/api/*.js'
   },
+  reporter: 'reporters/custom.js',
+  reporterOptions: {
+    mochaFile: "results/test-results.xml",
+    testCaseSwitchClassnameAndName: false
+  }
 });

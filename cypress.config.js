@@ -6,10 +6,5 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     specPattern: 'cypress/e2e/api/*.js'
-  },
-  reporter: 'reporters/custom.js',
-  reporterOptions: {
-    mochaFile: "results/test-results.xml",
-    testCaseSwitchClassnameAndName: false
   }
 });

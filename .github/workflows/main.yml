@@ -1,33 +1,19 @@
-name: Build and Deploy
+name: Cypress Tests using Cypress Docker Image
 
-on:
-  push:
-    branches:
-      - main
+on: [push]
 
 jobs:
-  build-and-deploy:
+  cypress-run:
     runs-on: ubuntu-latest
-
+    container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v5.x.x # use the explicit version number
         with:
-          node-version: '14'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build Application
-        run: npm run build
-
-      - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
-        with:
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: 'your-heroku-app-name'
-          heroku_email: 'your-heroku-email'
-          deployment_branch: 'main'
+          # Specify Browser since container image is compile with Firefox
+          browser: firefox

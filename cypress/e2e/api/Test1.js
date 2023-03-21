@@ -8,6 +8,7 @@ describe('My First Test Suite', function() {
                     message: 'Successfully! All records has been fetched.',
                   })
         })
+        cy.wait(3000)
     })
     it('Get Employee ID', function() {
         cy.request('https://dummy.restapiexample.com/api/v1/employee/3000')
@@ -17,6 +18,7 @@ describe('My First Test Suite', function() {
                     message: 'Successfully! Record has been fetched.',
                 })
         })
+        cy.wait(3000)
     })
     it('Create New Employee', function() {
         cy.request('POST', 'https://dummy.restapiexample.com/api/v1/create', {
@@ -27,5 +29,6 @@ describe('My First Test Suite', function() {
                 message: 'Successfully! Record has been added.',
             })
         })
+        cy.wait(3000)
     })
 })

@@ -16,7 +16,7 @@ jobs:
          browser: chrome
 
      - name: "Import results to Xray"
-       uses: mikepenz/xray-action@{latest-release}
+       uses: mikepenz/xray-action@v2.4.5
        with:
          username: F887B32D8EAE4A848511492A4A0D235B
          password: a5ecd9420ea1f29204670f290d7bd5f5fa4ed52a25f7a26239c9ac355dcece00

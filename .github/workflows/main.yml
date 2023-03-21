@@ -14,11 +14,13 @@ jobs:
        with:
          command: npx cypress run
          browser: chrome
-     - name: Submit results to Xray
-       uses: mikepenz/xray-action@v2.4.5
+
+     - name: "Import results to Xray"
+       uses: mikepenz/xray-action@{latest-release}
        with:
          username: F887B32D8EAE4A848511492A4A0D235B
          password: a5ecd9420ea1f29204670f290d7bd5f5fa4ed52a25f7a26239c9ac355dcece00
          testFormat: "junit"
          testPaths: "**/results/*.xml"
+         testExecKey: "DEMO-14"
          projectKey: "DEMO"

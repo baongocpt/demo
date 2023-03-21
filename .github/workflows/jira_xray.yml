@@ -1,0 +1,19 @@
+name: Cypress Tests
+on:
+  push:
+  workflow_dispatch:
+jobs:
+ Cypress-Test:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout GitCode
+       uses: actions/checkout@v2
+
+     - name: Run Cypress Test
+       uses: cypress-io/github-action@v4
+       with:
+         command: npx cypress run
+         browser: chrome
+
+     - name: Submit results to Xray
+       run: 'curl -H "Content-Type: text/xml" -X POST -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnQiOiJkZWVkMjZiMi1iYjkyLTM3MjAtODNkOC1jMWVkZjkzMWRlNGYiLCJhY2NvdW50SWQiOiI2NDBkZjlmZjEyNzMxMzFmMmFkZmI5NGYiLCJpc1hlYSI6ZmFsc2UsImlhdCI6MTY3OTM3NjU4OSwiZXhwIjoxNjc5NDYyOTg5LCJhdWQiOiJGODg3QjMyRDhFQUU0QTg0ODUxMTQ5MkE0QTBEMjM1QiIsImlzcyI6ImNvbS54cGFuZGl0LnBsdWdpbnMueHJheSIsInN1YiI6IkY4ODdCMzJEOEVBRTRBODQ4NTExNDkyQTRBMEQyMzVCIn0.2lBuuWwdsdNBgnrVFuExTnZa4P09Y1cXn1Rc1B160UQ" --data @"results/test-results.xml" "https://xray.cloud.getxray.app/api/v1/import/execution/junit?projectKey=DEMO&testExecKey=DEMO-22"'

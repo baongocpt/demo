@@ -34,7 +34,7 @@ describe('Verify API', function() {
     it('to get all employees', function() {
         cy.request('https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty')
             .should((response) => {
-                expect(response.status).to.eq(200)
+                expect(response.status).to.eq(300)
             })
     })
     it('to get an employee ID', function() {

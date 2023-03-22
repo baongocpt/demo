@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-describe('Verify API', function() {
+describe('Test API', function() {
     // it('to get all employees', function() {
     //     cy.request('https://dummy.restapiexample.com/api/v1/employees')
     //         .should((response) => {
@@ -31,19 +31,19 @@ describe('Verify API', function() {
     //     })
     //     cy.wait(3000)
     // })
-    it('to get all employees', function() {
+    it('Verify API to get all employees', function() {
         cy.request('https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty')
             .should((response) => {
                 expect(response.status).to.eq(300)
             })
     })
-    it('to get an employee ID', function() {
+    it('Verify API to get an employee ID', function() {
         cy.request('https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty')
             .should((response) => {
                 expect(response.status).to.eq(200)
             })
     })
-    it('to create new employee', function() {
+    it('Verify API to create new employee', function() {
         cy.request('https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty')
             .should((response) => {
                 expect(response.status).to.eq(200)

@@ -8,10 +8,9 @@ module.exports = defineConfig({
     },
     specPattern: 'cypress/e2e/api/*.js'
   },
-  reporter: 'cypress-junit',
+  reporter: 'junit',
   reporterOptions: {
     mochaFile: 'results/test-results.xml',
-    toConsole: true,
-    testCaseSwitchClassnameAndName: true,
+    testCaseSwitchClassnameAndName: false
   },
 });

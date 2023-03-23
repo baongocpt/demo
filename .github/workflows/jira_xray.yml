@@ -9,16 +9,18 @@ jobs:
        uses: actions/checkout@v2
 
      - name: Run Cypress Test
+       id: hello
        uses: cypress-io/github-action@v4
        with:
          command: npx cypress run
          browser: chrome
+       continue-on-error: true
 
      - name: Submit results to Xray
        run: 'curl -H "Content-Type: multipart/form-data" -X POST -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnQiOiJkZWVkMjZiMi1iYjkyLTM3MjAtODNkOC1jMWVkZjkzMWRlNGYiLCJhY2NvdW50SWQiOiI2NDBkZjlmZjEyNzMxMzFmMmFkZmI5NGYiLCJpc1hlYSI6ZmFsc2UsImlhdCI6MTY3OTU2NDU5NCwiZXhwIjoxNjc5NjUwOTk0LCJhdWQiOiJGODg3QjMyRDhFQUU0QTg0ODUxMTQ5MkE0QTBEMjM1QiIsImlzcyI6ImNvbS54cGFuZGl0LnBsdWdpbnMueHJheSIsInN1YiI6IkY4ODdCMzJEOEVBRTRBODQ4NTExNDkyQTRBMEQyMzVCIn0.iK7hy5HdYn_TZGC2crQRQL5UMTVqd75rlpbS6AuBtQo" -F "file=@results/test-results.xml" "https://xray.cloud.getxray.app/api/v2/import/execution/junit?projectKey=DEMO"'
        id: world
        continue-on-error: true
 
-     - name: Check on failures
+     - name: Check on failures 2
        if: steps.hello.outcome != 'success' || steps.world.outcome != 'success'
        run: exit 1

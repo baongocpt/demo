@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/cypress/bin/cypress run -s cypress/e2e/api/Test1.js --reporter junit",
+    "test": "./node_modules/cypress/bin/cypress run -s cypress/e2e/api/Test1.js",
     "cypress:open": "cypress open"
   },
   "author": "",

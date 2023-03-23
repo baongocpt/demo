@@ -9,7 +9,6 @@ jobs:
        uses: actions/checkout@v2
 
      - name: Run Cypress Test
-       id: hello
        uses: cypress-io/github-action@v4
        with:
          command: npx cypress run
